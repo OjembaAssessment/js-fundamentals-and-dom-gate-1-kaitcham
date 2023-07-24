@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="timer.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<head>
-    <link rel="stylesheet" href="timer.css">
-</head>
-
-<body>
-
-    <h2>Exercise 3 - Timer</h2>
-
-    <div id="myTimer">
-        Your timer should go here!
+  <body class="h-screen flex flex-col">
+    <h2 class="text-center text-4xl py-5">Exercise 3 - Timer</h2>
+    <div
+      id="myTimer"
+      class="flex-1 flex flex-col justify-center items-center gap-10 text-4xl w-[500px] mx-auto"
+    >
+      <div
+        class="calculate flex gap-4 [&>button]:bg-green-400 [&>button]:border-2 [&>button]:border-black [&>button]:px-5 [&>button]:py-2"
+      >
+        <button onclick="calculateNewTime(-1)">-</button>
+        <p
+          id="countNumber"
+          class="px-10 bg-green-400 border-2 border-black text-center py-2"
+        ></p>
+        <button onclick="calculateNewTime(1)">+</button>
+      </div>
+      <div
+        class="flex gap-10 [&>button]:bg-green-400 [&>button]:border-2 [&>button]:border-black [&>button]:px-5 [&>button]:py-2 [&>button]:w-full"
+      >
+        <button onclick="resetTimer()">Reset</button>
+        <button onclick="startTimer()">Start</button>
+      </div>
     </div>
-
     <script src="./timer.js"></script>
-
-</body>
-
+  </body>
 </html>
