@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  let newParagraph = '';
-
   const mostFiveOftenWords = Object.fromEntries(
     Object.entries(occurrences)
       .sort((a, b) => b[1] - a[1])
       .slice(1, 6)
   );
+
+  let newParagraph = '';
 
   for (let word of words) {
     if (mostFiveOftenWords[word.toLowerCase()]) {
